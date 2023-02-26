@@ -1,0 +1,5 @@
+.next
+.config
+.cache
+.upm
+package-lock.json
