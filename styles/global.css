@@ -1,4 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
 body {
+    background-color: rgb(42, 48, 54);
     margin: 0px;
-    font-family: Helvetica, Arial, sans-serif, serif;
+    font-family: 'Nunito Sans', Arial, sans-serif, serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.navLinks{
+    width: 200pt;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link {
+    color: white;
+    display: inline-block;
 }
