@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import banner from "app/SpelunkingStudiosBanner.png"
+import banner from "app/SpelunkingStudiosBannerWhite.png"
 
 export default function NavBar(){
     return(
