@@ -12,18 +12,26 @@ body{
     color: white;
 }
 
+#firstSectionBG{
+    background:linear-gradient(90deg, rgb(97, 23, 235), rgb(234, 24, 87));
+}
+
+#firstSection{
+    background:linear-gradient(0deg, rgba(0, 201, 151, 0.65), rgba(219, 219, 219, 0.35));
+}
+
 nav{
     z-index: 1;
     display: flex;
+    height: 80pt;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
     justify-content: center;
+    position: absolute;
 }
 
 #navContents{
-    padding-top: 20pt;
-    padding-bottom: 20pt;
-    width: 60vw;
+    width: 65vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,5 +76,12 @@ nav{
 .section{
     display: flex;
     justify-content: center;
-    padding: 100pt;
+    padding: 180pt;
+    padding-top: 200pt;
+}
+
+.section > div > p {
+    padding-top: 10pt;
+    font-size: 20pt;
+    text-align: center;
 }
