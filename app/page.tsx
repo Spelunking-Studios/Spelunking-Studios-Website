@@ -9,7 +9,7 @@ export default function Page() {
             <div className="section" id="firstSection">
                 <div>
                     <Image id="logoTitle" width="600" src={title} alt="helo"/>
-                    <p className="text">We're high schoolers that make games</p>
+                    <p className="text">We&apos;re high schoolers that make games</p>
                 </div>                
             </div>
         </div>
