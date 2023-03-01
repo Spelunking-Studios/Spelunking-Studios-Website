@@ -8,7 +8,7 @@ export default function Page() {
         <div id="firstSectionBG">
             <div className="section" id="firstSection">
                 <div>
-                    <Image id="logoTitle" width="600" src={title} alt="helo"/>
+                    <Image src={title} alt="helo" width={"600"} style={{objectFit: "contain"}}/>
                     <p className="text">We're high schoolers that make games</p>
                 </div>                
             </div>

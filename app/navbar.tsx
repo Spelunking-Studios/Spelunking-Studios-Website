@@ -21,7 +21,7 @@ export default function NavBar(){
         <nav>
             <div id="navContents">
                 <a href="/">
-                    <Image src={banner} width={250} alt="Spelunking Studios"/>
+                    <Image src={banner} width={250} alt="Spelunking Studios" style={{objectFit: "contain"}}/>
                 </a>
                 <div id="navLinks">
                     <Link id="nav_games"  className="link" href="/games">Games</Link>
