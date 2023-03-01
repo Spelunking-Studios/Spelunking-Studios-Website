@@ -91,7 +91,7 @@ nav{
 .section{
     display: flex;
     justify-content: center;
-    padding: 180pt;
+    padding-bottom: 180pt;
     padding-top: 200pt;
 }
 
@@ -99,4 +99,14 @@ nav{
     padding-top: 10pt;
     font-size: 20pt;
     text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    #navContents{
+        width: 100vw;
+    }
+
+    .link {
+        font-size: small;
+    }
 }
