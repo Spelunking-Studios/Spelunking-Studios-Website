@@ -21,13 +21,14 @@ body{
 }
 
 nav{
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
     display: flex;
     height: 80pt;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.3);
     justify-content: center;
-    position: absolute;
+    position: fixed;
+    top: 0;
 }
 
 #navContents{
@@ -101,12 +102,64 @@ nav{
     text-align: center;
 }
 
+#mobileHamburger{
+    display: none;
+}
+
 @media screen and (max-width: 700px) {
-    #navContents{
-        width: 100vw;
+    nav{
+        background-color: rgba(0, 0, 0, 0);
     }
 
-    .link {
-        font-size: small;
+    #navContents{
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100vw;
+        justify-content: center;
+    }
+
+    #navLinks {
+        display: none;
+    }
+    
+    #mobContainer{
+        z-index: -1;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(42, 48, 54);
+        transition: ease-in-out .25s;
+    }
+
+    #mobileLinks{
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25pt;
+        transition: ease-in-out .25s;
+        width: 80vw;
+        height: 60vh;
+        padding: 10pt;
+    }
+
+    .mobile{
+        font-size: xx-large;
+    }
+
+    #mobileHamburger{
+        z-index: 1;
+        display: flex;
+        width: 45pt;
+        height: 45pt;
+        font-size: 30pt;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 20pt;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
     }
 }
