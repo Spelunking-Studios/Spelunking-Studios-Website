@@ -20,6 +20,10 @@ body{
     background:linear-gradient(0deg, rgba(0, 201, 151, 0.6), rgba(219, 219, 219, 0.35));
 }
 
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
 nav{
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
@@ -106,6 +110,10 @@ nav{
     display: none;
 }
 
+#mobContainer{
+    display: none;
+}
+
 @media screen and (max-width: 700px) {
     nav{
         background-color: rgba(0, 0, 0, 0);
@@ -120,8 +128,18 @@ nav{
     #navLinks {
         display: none;
     }
+
+    .link::after {
+        display: none;
+        opacity: 0%;
+    }
     
+    .link:hover{
+        color: white;
+    }
+
     #mobContainer{
+        display: flex;
         z-index: -1;
         position: absolute;
         justify-content: center;
@@ -129,8 +147,35 @@ nav{
         width: 100vw;
         height: 100vh;
         background-color: rgb(42, 48, 54);
-        transition: ease-in-out .25s;
+        transition-timing-function: ease-in-out;
     }
+
+    @keyframes open {
+        0% {
+            transform: translate3d(0, 100%, 0);
+            opacity: 0%;
+        }
+        1%{
+            transform: translate3d(0, 0, 0);
+        }
+        100%{
+            opacity: 100%;
+        }
+    }
+
+    @keyframes close {
+        0% {
+            opacity: 100%;
+        }
+        99%{
+            transform: translate3d(0, 0, 0);
+        }
+        100%{
+            opacity: 0%;
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+
 
     #mobileLinks{
         display: grid;
@@ -146,6 +191,20 @@ nav{
 
     .mobile{
         font-size: xx-large;
+        opacity: 0%;
+    }
+
+    @keyframes appear {
+        0% {
+            transform: translate3d(0, 60px, 0);
+        }
+        20% {
+            opacity: 0%;
+        }
+        100% {
+            opacity: 100%;
+            transform: translate3d(0, 0, 0);
+        }
     }
 
     #mobileHamburger{
