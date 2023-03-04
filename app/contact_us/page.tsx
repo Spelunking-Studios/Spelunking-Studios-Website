@@ -7,7 +7,7 @@ export default function Page() {
                 <div>
                     <h1 className="text">Contact Us</h1>
                     <p className="text">Contact us</p>
-                </div>                
+                </div>
             </div>
         </div>
     );

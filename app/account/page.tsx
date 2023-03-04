@@ -7,7 +7,7 @@ export default function Page() {
                 <div>
                     <h1 className="text">Account</h1>
                     <p className="text">Account settings</p>
-                </div>                
+                </div>
             </div>
         </div>
     );
