@@ -2,16 +2,32 @@
 import Link from "next/link"
 import Image from "next/image"
 import banner from "app/SpelunkingStudiosBannerWhite.png"
-import { useState, useEffect } from "react"
+import { useState, cloneElement } from "react"
+import { usePathname } from "next/navigation";
 
 export default function NavBar(){
     const [mobileLinksShown, setMobileLinksShown] = useState(false);
+    const pathname = usePathname();
 
-    function toggleMobile(){
+    const links  = {
+        "/games" : <Link id="nav_games" className="link" href="/games" data-test={ pathname == "replace with URL" }>Games</Link>,
+        "/about" : <Link id="nav_about" className="link" href="/about" data-test={ pathname == "replace with URL" }>About</Link>,
+        "/contact_us" : <Link id="nav_contact" className="link" href="/contact_us" data-test={ pathname == "replace with URL" }>Contact Us</Link>,
+        "/account" : <Link id="nav_account" className="link" href="/account" data-test={ pathname == "replace with URL" }>Account</Link>
+    }
+
+    if (links[pathname]) {
+        links[pathname] = cloneElement(links[pathname]), {
+            "data-navbar-is-current-pathname": true
+        };
+        console.log(links[pathname]);
+    }
+
+    function toggleMobile() {
         setMobileLinksShown(!mobileLinksShown);
     }
 
-    return(
+    return (
         <div>
             <nav>
                 <div id="navContents">
@@ -19,10 +35,7 @@ export default function NavBar(){
                         <Image id="banner" src={banner} width={250} alt="Spelunking Studios" style={{objectFit: "contain"}}/>
                     </a>
                     <div id="navLinks">
-                        <Link id="nav_games" className="link" href="/games">Games</Link>
-                        <Link id="nav_about" className="link" href="/about">About</Link>
-                        <Link id="nav_contact" className="link" href="/contact_us">Contact Us</Link>
-                        <Link id="nav_account" className="link" href="/account">Account</Link>
+                        { Object.values(links) }
                     </div>
                 </div>
                 <div id="mobContainer" style={{animation: mobileLinksShown ? "open .25s ease-in-out forwards" : "close .25s ease-in-out forwards"}}>
@@ -37,6 +50,5 @@ export default function NavBar(){
                 <i className="material-symbols-outlined" id="mobileHamburger" onClick={toggleMobile}>{mobileLinksShown ? "close" : "menu"}</i>
             </nav>
         </div>
-        
     )
 }
