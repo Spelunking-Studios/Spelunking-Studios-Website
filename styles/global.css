@@ -103,6 +103,7 @@ nav {
 
 #mobileHamburger {
     display: none;
+    cursor: pointer;
 }
 
 #mobContainer {
