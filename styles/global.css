@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
 
 body {
     overflow-x: hidden;
     background-color: rgb(42, 48, 54);
     margin: 0px;
-    font-family: 'Nunito Sans', Arial, sans-serif, serif;
+    font-family: "Nunito Sans", Arial, sans-serif, serif;
 }
 
 .text {
@@ -13,11 +12,15 @@ body {
 }
 
 #firstSectionBG {
-    background:linear-gradient(90deg, rgb(97, 23, 235), rgb(234, 24, 87));
+    background: linear-gradient(90deg, rgb(97, 23, 235), rgb(234, 24, 87));
 }
 
 #firstSection {
-    background:linear-gradient(0deg, rgba(0, 201, 151, 0.6), rgba(219, 219, 219, 0.35));
+    background: linear-gradient(
+        0deg,
+        rgba(0, 201, 151, 0.6),
+        rgba(219, 219, 219, 0.35)
+    );
 }
 
 * {
@@ -54,15 +57,15 @@ nav {
     font-size: large;
     text-decoration: none;
     display: inline-block;
-    transition: ease-in-out .25s;
+    transition: ease-in-out 0.25s;
     overflow: hidden;
 }
 
 .link::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: rgb(0, 213, 255);
-    transition: ease-in-out .25s;
+    transition: ease-in-out 0.25s;
     right: 0;
     bottom: 0;
     width: 0%;
@@ -70,7 +73,7 @@ nav {
 }
 
 .active::before {
-    content: '';
+    content: "";
     position: absolute;
     background-color: rgb(255, 255, 255);
     left: 0;
@@ -130,7 +133,7 @@ nav {
         display: none;
         opacity: 0%;
     }
-    
+
     .link:hover {
         color: white;
     }
@@ -173,14 +176,13 @@ nav {
         }
     }
 
-
     #mobileLinks {
         display: grid;
         text-align: center;
         justify-content: center;
         align-items: center;
         border-radius: 25pt;
-        transition: ease-in-out .25s;
+        transition: ease-in-out 0.25s;
         width: 80vw;
         height: 60vh;
         padding: 10pt;
@@ -217,6 +219,6 @@ nav {
         color: white;
         background-color: rgba(0, 0, 0, 0.3);
         border-radius: 50%;
-        transition: all .25s;
+        transition: all 0.25s;
     }
 }

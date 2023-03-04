@@ -7,7 +7,7 @@ export default function Page() {
                 <div>
                     <h1 className="text">Games</h1>
                     <p className="text">Our games</p>
-                </div>                
+                </div>
             </div>
         </div>
     );
