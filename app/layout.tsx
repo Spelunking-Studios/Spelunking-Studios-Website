@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <head>
                 <title>Spelunking Studios</title>
-                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&display=optional"/>
             </head>
             <body>
                 <NavBar/>
