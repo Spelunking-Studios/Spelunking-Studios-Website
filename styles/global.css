@@ -107,6 +107,7 @@ a.link[data-navbar-is-current-pathname]::before {
 
 #mobileHamburger {
     display: none;
+    cursor: pointer;
 }
 
 #mobContainer {
