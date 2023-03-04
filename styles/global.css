@@ -49,6 +49,7 @@ nav {
 }
 
 .link {
+    --hover-color: rgb(0, 213, 255);
     position: relative;
     color: white;
     font-size: large;
@@ -61,7 +62,7 @@ nav {
 .link::after {
     content: '';
     position: absolute;
-    background-color: rgb(0, 213, 255);
+    background-color: var(--hover-color);
     transition: ease-in-out .25s;
     right: 0;
     bottom: 0;
@@ -79,12 +80,13 @@ nav {
     height: 0.1em;
 }
 
-a.link[data-navbar-is-current-pathname]::before {
+a.link[data-navbar-is-current-page="true"]::before {
     width: 100%;
+    background-color: var(--hover-color);
 }
 
 .link:hover {
-    color: rgb(0, 213, 255);
+    color: var(--hover-color);
 }
 
 .link:hover::after {

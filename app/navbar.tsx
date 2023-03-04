@@ -9,20 +9,6 @@ export default function NavBar(){
     const [mobileLinksShown, setMobileLinksShown] = useState(false);
     const pathname = usePathname();
 
-    const links  = {
-        "/games" : <Link id="nav_games" className="link" href="/games" data-test={ pathname == "replace with URL" }>Games</Link>,
-        "/about" : <Link id="nav_about" className="link" href="/about" data-test={ pathname == "replace with URL" }>About</Link>,
-        "/contact_us" : <Link id="nav_contact" className="link" href="/contact_us" data-test={ pathname == "replace with URL" }>Contact Us</Link>,
-        "/account" : <Link id="nav_account" className="link" href="/account" data-test={ pathname == "replace with URL" }>Account</Link>
-    }
-
-    if (links[pathname]) {
-        links[pathname] = cloneElement(links[pathname]), {
-            "data-navbar-is-current-pathname": true
-        };
-        console.log(links[pathname]);
-    }
-
     function toggleMobile() {
         setMobileLinksShown(!mobileLinksShown);
     }
@@ -35,7 +21,10 @@ export default function NavBar(){
                         <Image id="banner" src={banner} width={250} alt="Spelunking Studios" style={{objectFit: "contain"}}/>
                     </a>
                     <div id="navLinks">
-                        { Object.values(links) }
+                        <Link id="nav_games" className="link" href="/games" data-navbar-is-current-page={ pathname == "/games" }>Games</Link>
+                        <Link id="nav_about" className="link" href="/about" data-navbar-is-current-page={ pathname == "/about" }>About</Link>
+                        <Link id="nav_contact" className="link" href="/contact_us" data-navbar-is-current-page={ pathname == "/contact_us" }>Contact Us</Link>
+                        <Link id="nav_account" className="link" href="/account" data-navbar-is-current-page={ pathname == "/account" }>Account</Link>
                     </div>
                 </div>
                 <div id="mobContainer" style={{animation: mobileLinksShown ? "open .25s ease-in-out forwards" : "close .25s ease-in-out forwards"}}>
