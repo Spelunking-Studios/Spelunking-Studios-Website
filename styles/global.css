@@ -1,30 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 
 
-body{
+body {
     overflow-x: hidden;
     background-color: rgb(42, 48, 54);
     margin: 0px;
     font-family: 'Nunito Sans', Arial, sans-serif, serif;
 }
 
-.text{
+.text {
     color: white;
 }
 
-#firstSectionBG{
+#firstSectionBG {
     background:linear-gradient(90deg, rgb(97, 23, 235), rgb(234, 24, 87));
 }
 
-#firstSection{
+#firstSection {
     background:linear-gradient(0deg, rgba(0, 201, 151, 0.6), rgba(219, 219, 219, 0.35));
 }
 
-*{
+* {
     -webkit-tap-highlight-color: transparent;
 }
 
-nav{
+nav {
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
     display: flex;
@@ -35,14 +35,14 @@ nav{
     top: 0;
 }
 
-#navContents{
+#navContents {
     width: 65vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#navLinks{
+#navLinks {
     display: flex;
     justify-content: space-between;
     width: 300pt;
@@ -69,31 +69,26 @@ nav{
     height: 0.1em;
 }
 
-.link::before{
-    --underline-active: 0%;
+.active::before {
     content: '';
     position: absolute;
     background-color: rgb(255, 255, 255);
     left: 0;
     bottom: 0;
-    width: var(--underline-active);
+    width: 100%;
     height: 0.1em;
 }
 
-.link::before[aria-current="page"]{
-    width: 100%;
-}
-
-.link:hover{
+.link:hover {
     color: rgb(0, 213, 255);
 }
 
-.link:hover::after{
+.link:hover::after {
     left: 0;
     width: 100%;
 }
 
-.section{
+.section {
     display: flex;
     justify-content: center;
     padding-bottom: 180pt;
@@ -106,20 +101,21 @@ nav{
     text-align: center;
 }
 
-#mobileHamburger{
+#mobileHamburger {
     display: none;
 }
 
-#mobContainer{
+#mobContainer {
     display: none;
 }
 
 @media screen and (max-width: 700px) {
-    nav{
+    nav {
         background-color: rgba(0, 0, 0, 0);
+        height: 65pt;
     }
 
-    #navContents{
+    #navContents {
         background-color: rgba(0, 0, 0, 0.3);
         width: 100vw;
         justify-content: center;
@@ -134,11 +130,11 @@ nav{
         opacity: 0%;
     }
     
-    .link:hover{
+    .link:hover {
         color: white;
     }
 
-    #mobContainer{
+    #mobContainer {
         display: flex;
         z-index: -1;
         position: absolute;
@@ -155,10 +151,10 @@ nav{
             transform: translate3d(0, 100%, 0);
             opacity: 0%;
         }
-        1%{
+        1% {
             transform: translate3d(0, 0, 0);
         }
-        100%{
+        100% {
             opacity: 100%;
         }
     }
@@ -167,17 +163,17 @@ nav{
         0% {
             opacity: 100%;
         }
-        99%{
+        99% {
             transform: translate3d(0, 0, 0);
         }
-        100%{
+        100% {
             opacity: 0%;
             transform: translate3d(0, 100%, 0);
         }
     }
 
 
-    #mobileLinks{
+    #mobileLinks {
         display: grid;
         text-align: center;
         justify-content: center;
@@ -189,7 +185,7 @@ nav{
         padding: 10pt;
     }
 
-    .mobile{
+    .mobile {
         font-size: xx-large;
         opacity: 0%;
     }
@@ -207,18 +203,19 @@ nav{
         }
     }
 
-    #mobileHamburger{
+    #mobileHamburger {
         z-index: 1;
         display: flex;
-        width: 45pt;
-        height: 45pt;
-        font-size: 30pt;
+        width: 40pt;
+        height: 40pt;
+        font-size: 25pt;
         justify-content: center;
         align-items: center;
         position: fixed;
-        bottom: 20pt;
+        bottom: 15pt;
         color: white;
         background-color: rgba(0, 0, 0, 0.3);
         border-radius: 50%;
+        transition: all .25s;
     }
 }

@@ -2,14 +2,13 @@
 import Link from "next/link"
 import Image from "next/image"
 import banner from "app/SpelunkingStudiosBannerWhite.png"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function NavBar(){
     const [mobileLinksShown, setMobileLinksShown] = useState(false);
-    
+
     function toggleMobile(){
         setMobileLinksShown(!mobileLinksShown);
-        console.log("hello");
     }
 
     return(
