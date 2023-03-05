@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link"
 import Image from "next/image"
-import banner from "app/SpelunkingStudiosBannerWhite.png"
+import banner from "public/images/SpelunkingStudiosBannerWhite.png"
 import { useState, cloneElement } from "react"
 import { usePathname } from "next/navigation";
 
@@ -17,9 +17,9 @@ export default function NavBar(){
         <div>
             <nav>
                 <div id="navContents">
-                    <a href="/">
+                    <Link href="/">
                         <Image id="banner" src={banner} width={250} alt="Spelunking Studios" style={{objectFit: "contain"}}/>
-                    </a>
+                    </Link>
                     <div id="navLinks">
                         <Link id="nav_games" className="link" href="/games" data-navbar-is-current-page={ pathname == "/games" }>Games</Link>
                         <Link id="nav_about" className="link" href="/about" data-navbar-is-current-page={ pathname == "/about" }>About</Link>

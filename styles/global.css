@@ -38,14 +38,29 @@ nav {
 #navContents {
     width: 65vw;
     display: flex;
-    justify-content: space-between;
+    gap: clamp(1vw, 5vw, 10vw);
     align-items: center;
+}
+
+#navContents > *:first-child {
+    flex-shrink: 1;
+}
+
+#navContents > *:first-child > * {
+    min-height: 1.5em;
+}
+
+#navContents > * {
+    flex-shrink: 3;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #navLinks {
     display: flex;
-    justify-content: space-between;
-    width: 300pt;
+    margin-left: auto;
+    margin-right: auto;
+    gap: max(10%, 3em);
 }
 
 .link {
@@ -57,6 +72,11 @@ nav {
     display: inline-block;
     transition: ease-in-out .25s;
     overflow: hidden;
+    padding: auto, 1%;
+    flex: 1;
+    flex-shrink: 1;
+    align-self: center;
+    min-width: fit-content;
 }
 
 .link::after {
@@ -82,7 +102,6 @@ nav {
 
 a.link[data-navbar-is-current-page="true"]::before {
     width: 100%;
-    background-color: var(--hover-color);
 }
 
 .link:hover {
@@ -116,7 +135,13 @@ a.link[data-navbar-is-current-page="true"]::before {
     display: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 920px) {
+    #navLinks {
+        flex: 2;
+    }
+}
+
+@media screen and (max-width: 900px) {
     nav {
         background-color: rgba(0, 0, 0, 0);
         height: 65pt;
