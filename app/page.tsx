@@ -1,6 +1,6 @@
 import Image from "next/image";
 import bg from "./placeholder.jpg";
-import title from "./SpelunkingStudiosTitleWhite.png";
+import title from "public/images/SpelunkingStudiosTitleWhite.png";
 
 
 export default function Page() {
