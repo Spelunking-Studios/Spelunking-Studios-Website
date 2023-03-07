@@ -99,12 +99,14 @@ nav {
     background-color: rgb(255, 255, 255);
     left: 0;
     bottom: 0;
-    width: 0%;
+    width: 100%;
+    opacity: 0%;
     height: 0.1em;
+    transition: ease-in-out .25s;
 }
 
 a.link[data-navbar-is-current-page="true"]::before {
-    width: 100%;
+    opacity: 100%;
 }
 
 .link:hover {
