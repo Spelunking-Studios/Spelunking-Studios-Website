@@ -14,7 +14,7 @@
     "devDependencies": {
         "@types/node": "18.14.6",
         "@types/react": "18.0.28",
-        "prettier": "2.8.4"
+        "prettier": "2.8.7"
     },
     "dependencies": {
         "eslint-config-next": "^13.2.3",
