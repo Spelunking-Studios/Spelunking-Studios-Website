@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import banner from "app/SpelunkingStudiosBannerWhite.png";
+import banner from "public/images/SpelunkingStudiosBannerWhite.png";
 import { useState, useEffect } from "react";
 
 export default function Footer() {
