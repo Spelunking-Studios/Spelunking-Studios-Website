@@ -1,13 +1,11 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
-import banner from "public/images/SpelunkingStudiosBannerWhite.png";
+import banner from "app/SpelunkingStudiosBannerWhite.png";
 import { useState, useEffect } from "react";
 
-export default function NavBar() {
+export default function Footer() {
     const [mobileLinksShown, setMobileLinksShown] = useState(false);
-    const pathname = usePathname();
 
     function toggleMobile() {
         setMobileLinksShown(!mobileLinksShown);
@@ -15,17 +13,18 @@ export default function NavBar() {
 
     return (
         <div>
-            <nav>
-                <div id="navContents">
-                    <a href="/">
-                        <Image
-                            id="banner"
-                            src={banner}
-                            width={250}
-                            alt="Spelunking Studios"
-                            style={{ objectFit: "contain" }}
-                        />
-                    </a>
+            <footer>
+            <div id="footerContentParent">
+                <div className="footerContent"/>
+                <a href="/"  className="footerContent">
+                    <Image
+                        src={banner}
+                        width={250}
+                        alt="Spelunking Studios"
+                        style={{ objectFit: "contain" }}
+                    />
+                </a>
+                <div className="footerContent">
                     <div id="navLinks">
                         <Link id="nav_games" className="link" href="/games">
                             Games
@@ -45,6 +44,7 @@ export default function NavBar() {
                         </Link>
                     </div>
                 </div>
+            </div>
                 <div
                     id="mobContainer"
                     style={{
@@ -116,7 +116,7 @@ export default function NavBar() {
                 >
                     {mobileLinksShown ? "close" : "menu"}
                 </i>
-            </nav>
+            </footer>
         </div>
     );
 }
