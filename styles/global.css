@@ -66,6 +66,34 @@ nav {
     gap: max(10%, 3em);
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+#footerContentParent {
+    height: 80pt;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerContent {
+    opacity: 0.75;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footerContent:first-child {
+    margin-right: auto;
+}
+
+.footerContent:last-child {
+    margin-left: auto;
+}
+
 .link {
     --hover-color: rgb(0, 213, 255);
     position: relative;
@@ -85,7 +113,7 @@ nav {
 .link::after {
     content: "";
     position: absolute;
-    background-color: var(--hover-color);
+    background-color: rgb(0, 213, 255);
     transition: ease-in-out 0.25s;
     right: 0;
     bottom: 0;
@@ -93,7 +121,7 @@ nav {
     height: 0.1em;
 }
 
-.link::before {
+.active::before {
     content: "";
     position: absolute;
     background-color: rgb(255, 255, 255);
