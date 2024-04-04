@@ -51,6 +51,34 @@ nav {
     width: 300pt;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+#footerContentParent {
+    height: 80pt;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerContent {
+    opacity: 0.75;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.footerContent:first-child {
+    margin-right: auto;
+}
+
+.footerContent:last-child {
+    margin-left: auto;
+}
+
 .link {
     position: relative;
     color: white;
