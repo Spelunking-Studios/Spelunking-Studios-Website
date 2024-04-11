@@ -14,7 +14,7 @@ export default function Page() {
                         style={{ objectFit: "contain" }}
                     />
                     <p className="text">
-                        We&apos;re high schoolers that make games
+                        We&apos;re high schoolers that supposedly want to work on a game, or something, so far we've done nothing
                     </p>
                 </div>
             </div>
