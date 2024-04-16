@@ -130,7 +130,7 @@ footer {
     width: 100%;
     opacity: 0%;
     height: 0.1em;
-    transition: ease-in-out .25s;
+    transition: ease-in-out 0.25s;
 }
 
 a.link[data-navbar-is-current-page="true"]::before {
