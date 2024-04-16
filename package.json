@@ -12,15 +12,14 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
-        "@types/node": "18.14.6",
-        "@types/react": "18.0.28",
-        "prettier": "2.8.4"
+        "@types/node": "^20.12.7",
+        "@types/react": "^18.2.79",
+        "prettier": "^3.2.5"
     },
     "dependencies": {
         "eslint-config-next": "^14.2.1",
         "next": "^14.2.1",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "styles": "^0.2.1"
+        "react-dom": "^18.2.0"
     }
 }
