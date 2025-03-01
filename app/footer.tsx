@@ -14,37 +14,41 @@ export default function Footer() {
     return (
         <div>
             <footer>
-            <div id="footerContentParent">
-                <div className="footerContent"/>
-                <a href="/"  className="footerContent">
-                    <Image
-                        src={banner}
-                        width={250}
-                        alt="Spelunking Studios"
-                        style={{ objectFit: "contain" }}
-                    />
-                </a>
-                <div className="footerContent">
-                    <div id="navLinks">
-                        <Link id="nav_games" className="link" href="/games">
-                            Games
-                        </Link>
-                        <Link id="nav_about" className="link" href="/about">
-                            About
-                        </Link>
-                        <Link
-                            id="nav_contact"
-                            className="link"
-                            href="/contact_us"
-                        >
-                            Contact Us
-                        </Link>
-                        <Link id="nav_account" className="link" href="/account">
-                            Account
-                        </Link>
+                <div id="footerContentParent">
+                    <div className="footerContent" />
+                    <a href="/" className="footerContent">
+                        <Image
+                            src={banner}
+                            width={250}
+                            alt="Spelunking Studios"
+                            style={{ objectFit: "contain" }}
+                        />
+                    </a>
+                    <div className="footerContent">
+                        <div id="navLinks">
+                            <Link id="nav_games" className="link" href="/games">
+                                Games
+                            </Link>
+                            <Link id="nav_about" className="link" href="/about">
+                                About
+                            </Link>
+                            <Link
+                                id="nav_contact"
+                                className="link"
+                                href="/contact_us"
+                            >
+                                Contact Us
+                            </Link>
+                            <Link
+                                id="nav_account"
+                                className="link"
+                                href="/account"
+                            >
+                                Account
+                            </Link>
+                        </div>
                     </div>
                 </div>
-            </div>
                 <div
                     id="mobContainer"
                     style={{
